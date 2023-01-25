@@ -4,14 +4,11 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const middleware_auth = require('./middleware/auth');
-const ControllerLogin = require('./login/controller.login');
 const ControllerGames = require('./games/controller.games');
 const ControllerUsers = require('./users/controller.users');
 
 const gamesRouter = express.Router();
 const usersRouter = express.Router();
-
-app.post("/auth", ControllerLogin.login);
 
 gamesRouter
     .route('/api/games')
